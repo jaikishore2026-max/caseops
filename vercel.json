@@ -4,6 +4,10 @@
   "outputDirectory": "dist/public",
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/dispatch?__path=:path*"
+    },
+    {
       "source": "/:path((?!api(?:/|$)).*)",
       "destination": "/index.html"
     }
