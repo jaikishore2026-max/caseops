@@ -1,10 +1,10 @@
 import express from "express";
 import type { Request, Response } from "express-serve-static-core";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import { registerOAuthRoutes } from "./_core/oauth";
-import { publicPlatformScript } from "./_core/publicConfig";
-import { createContext } from "./_core/context";
-import { appRouter } from "./routers";
+import { registerOAuthRoutes } from "./_core/oauth.js";
+import { publicPlatformScript } from "./_core/publicConfig.js";
+import { createContext } from "./_core/context.js";
+import { appRouter } from "./routers.js";
 
 export function createApp() {
   const app = express();

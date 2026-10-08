@@ -1,10 +1,10 @@
-import { COOKIE_NAME } from "@shared/const";
+import { COOKIE_NAME } from "../shared/const.js";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { getSessionCookieOptions } from "./_core/cookies";
-import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
-import { caseOpsStore } from "./data/investigation";
+import { getSessionCookieOptions } from "./_core/cookies.js";
+import { systemRouter } from "./_core/systemRouter.js";
+import { publicProcedure, router } from "./_core/trpc.js";
+import { caseOpsStore } from "./data/investigation.js";
 
 const caseOpsActionInput = z.object({
   caseId: z.string().regex(/^CASE-\d{4}$/, "Expected a synthetic CASE-#### identifier"),

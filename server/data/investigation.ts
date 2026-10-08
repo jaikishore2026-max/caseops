@@ -6,8 +6,8 @@ import type {
   EventRecord,
   RiskBand,
   TimelineItem,
-} from "../../shared/caseops";
-import { formatINR, formatIndiaDate, formatIndiaDateTime, formatIndiaTime } from "../../shared/caseops";
+} from "../../shared/caseops.js";
+import { formatINR, formatIndiaDate, formatIndiaDateTime, formatIndiaTime } from "../../shared/caseops.js";
 
 const EVENT_SEED_COUNT = 1_284;
 const LIVE_EVENT_INTERVAL_MS = 60_000;

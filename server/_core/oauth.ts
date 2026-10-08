@@ -1,10 +1,10 @@
-import { COOKIE_NAME, ONE_YEAR_MS, OAUTH_STATE_COOKIE, decodeOAuthState } from "@shared/const";
+import { COOKIE_NAME, ONE_YEAR_MS, OAUTH_STATE_COOKIE, decodeOAuthState } from "../../shared/const.js";
 import { parse as parseCookieHeader } from "cookie";
 import type { Express } from "express";
 import type { Request, Response } from "express-serve-static-core";
-import * as db from "../db";
-import { getSessionCookieOptions } from "./cookies";
-import { sdk } from "./sdk";
+import * as db from "../db.js";
+import { getSessionCookieOptions } from "./cookies.js";
+import { sdk } from "./sdk.js";
 
 function getQueryParam(req: Request, key: string): string | undefined {
   const value = req.query[key];

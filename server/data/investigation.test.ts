@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { formatINR } from "../../shared/caseops";
-import { createCaseOpsStore } from "./investigation";
+import { formatINR } from "../../shared/caseops.js";
+import { createCaseOpsStore } from "./investigation.js";
 
 describe("CaseOps synthetic server feed", () => {
   it("formats amounts with INR and Indian digit grouping", () => {
