@@ -17,10 +17,13 @@ The development server listens on `PORT` (default 3000). The client requests `ca
 
 ```sh
 pnpm build
+pnpm build:server
 pnpm start
 ```
 
-`pnpm build` compiles the Vite client and bundles the Express/tRPC server. The managed Server capability is enabled for Preview; managed Database remains disabled. The site has not been published.
+`pnpm build` compiles the Vite client for static hosting. `pnpm build:server` bundles the Express/tRPC server for the `pnpm start` command. `pnpm preview` previews the static Vite build.
+
+Vercel builds the static client into `dist/public` and serves `/api/*` through the serverless Express handler in `api/[...path].ts`; all other unmatched routes fall back to the SPA. Server-side synthetic data and analyst actions are held in memory, so they can reset on cold starts and are not shared across serverless instances.
 
 ## Data and scoring
 
